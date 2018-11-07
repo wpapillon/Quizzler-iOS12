@@ -67,6 +67,10 @@ class ViewController: UIViewController {
     func checkAnswer(pickedAn :Bool) {
         if pickedAn == ques.questions[currentQuestion].answer{
             score += 1
+            ProgressHUD.showSuccess("Correct!")
+        }
+        else{
+            ProgressHUD.showError("Oops!")
         }
     }
     
